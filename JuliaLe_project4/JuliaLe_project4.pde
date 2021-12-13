@@ -4,27 +4,58 @@ import ddf.minim.signals.*;
  
 Minim minim;
 AudioOutput out;
+PImage coral, dpurp,green, lblue, lgreen, lpink, lyell, mag, navy, org, pink, purple, red,teal, vert, vio, yellow;
 
 void setup()
 {
   size(800, 600, P2D);
- 
   minim = new Minim(this);
   out = minim.getLineOut(Minim.STEREO);
+  coral=loadImage("coral.jpg");
+  dpurp=loadImage("dpurp.jpg");
+  dpurp.resize(800,600);
+  green=loadImage("green.jpg");
+  lblue=loadImage("lblue.jpg");
+  lgreen=loadImage("lgreen.jpg");
+  lpink=loadImage("lpink.jpg");
+  lyell=loadImage("lyell.jpg");
+  mag=loadImage("mag.jpg");
+  navy=loadImage("navy.jpg");
+  org=loadImage("org.jpg");
+  pink=loadImage("pink.jpg");
+   pink.resize(800,600);
+  purple=loadImage("purple.jpg");
+  purple.resize(800,600);
+  red=loadImage("red.jpg");
+  red.resize(800,600);
+  teal=loadImage("teal.jpg");
+  vert=loadImage("vert.jpg");
+  vio=loadImage("vio.jpg");
+  yellow=loadImage("yellow.jpg");
 }
  
 void draw()
 {
   background(0);
- // stroke(255);
- /* for(int i = 0; i < out.bufferSize() - 1; i++)
-  {
-    float x1 = map(i, 0, out.bufferSize(), 0, width);
-    float x2 = map(i+1, 0, out.bufferSize(), 0, width);
-    line(x1, 50 + out.left.get(i)*50, x2, 50 + out.left.get(i+1)*50);
-    line(x1, 150 + out.right.get(i)*50, x2, 150 + out.right.get(i+1)*50);
-  }*/
    switch(key){
+       case 'z': image(coral, 0,0);break;
+       case 's': image(dpurp, 0,0);break;
+       case 'x':  image(green, 0,0); break;
+       case 'd':  image(lblue, 0,0); break;
+       case 'c':  image(lgreen, 0,0); break;
+       case 'v':  image(lpink, 0,0); break;
+       case 'g':  image(lyell, 0,0); break;
+       case 'b':  image(mag, 0,0); break;
+       case 'h':  image(navy, 0,0); break;
+       case 'n':  image(org, 0,0); break;
+       case 'j': image(pink, 0,0); break;
+       case 'm': image(purple, 0,0); break;
+       case ',': image(red, 0,0); break;
+       case 'l': image(teal, 0,0); break;
+       case '.': image(vert, 0,0); break;
+       case ';': image(vio, 0,0); break;
+       case '/': image(yellow, 0,0); break;
+       
    }
 }
  
